@@ -16,7 +16,7 @@ const ProductPage = ({ match }) => {
     }
 
     fetchProduct()
-  },[])
+  },[match])
 
 
   // const product = products.find(p => p._id === match.params.id)
