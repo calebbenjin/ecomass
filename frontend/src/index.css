@@ -8,8 +8,32 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 main {
   min-height: 80vh;
+}
+
+.showToaster {
+  display: block;
+  width: 40%;
+  padding: 2rem;
+  position: fixed;
+  top: 1rem;
+  left: 30%;
+  right: 40%;
+  z-index: 1;
+  background: rgb(212, 208, 208);
+}
+
+.hideToaster {
+  display: none;
+}
+
+.closeBtn {
+  cursor: pointer;
 }
 
