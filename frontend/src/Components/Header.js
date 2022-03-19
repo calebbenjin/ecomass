@@ -6,7 +6,7 @@ import Toaster from './Toaster'
 const Header = () => {
   return (
     <header>
-      <Toaster />
+      {/* <Toaster /> */}
       <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
         <Container>
           <Link to='/'>
