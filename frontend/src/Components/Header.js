@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import Toaster from './Toaster'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+// import Toaster from './Toaster'
 
 const Header = () => {
   return (
@@ -9,32 +9,34 @@ const Header = () => {
       {/* <Toaster /> */}
       <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
         <Container>
-          <Link to='/'>
-            <Navbar.Brand>Ecommass</Navbar.Brand>
-          </Link>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='m-auto'>
-              <Link to='/products'>
-                <Nav.Link>Products</Nav.Link>
-              </Link>
-              <Link to='/'>
-                <Nav.Link>Pricing</Nav.Link>
-              </Link>
-            </Nav>
-            <Nav>
-              <Link to='/cart'>
-                <Nav.Link>
-                  <i className='fas fa-shopping-cart'></i> Cart
-                </Nav.Link>
-              </Link>
-              <Link to='/login'>
-                <Nav.Link>
-                  <i className='fas fa-user'></i> Sign in
-                </Nav.Link>
-              </Link>
-            </Nav>
-          </Navbar.Collapse>
+          <Router>
+            <Link to='/'>
+              <Navbar.Brand>Ecommass</Navbar.Brand>
+            </Link>
+            <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+            <Navbar.Collapse id='responsive-navbar-nav'>
+              <Nav className='m-auto'>
+                <Link to='/products'>
+                  <span className="link">Products</span>
+                </Link>
+                <Link to='/'>
+                  <span className="link">Pricing</span>
+                </Link>
+              </Nav>
+              <Nav>
+                <Link to='/cart'>
+                  <span className="link">
+                    <i className='fas fa-shopping-cart'></i> Cart
+                  </span>
+                </Link>
+                <Link to='/login'>
+                  <span className="link">
+                    <i className='fas fa-user'></i> Sign in
+                  </span>
+                </Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Router>
         </Container>
       </Navbar>
     </header>

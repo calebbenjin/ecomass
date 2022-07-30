@@ -37,3 +37,15 @@ main {
   cursor: pointer;
 }
 
+header .link {
+  color: #fff;
+  margin-left: 1rem;
+}
+
+@media(max-width: 768px) {
+  header .link {
+    color: #fff;
+    margin-top: 1rem;
+  }
+}
+
